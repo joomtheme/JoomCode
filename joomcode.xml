@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  @package     JoomCode
+  @subpackage  plg_content_joomcode
+
+  @copyright   Copyright (C) 2026 JoomTheme. All rights reserved.
+  @license     GNU General Public License version 2 or later; see LICENSE.txt
+-->
+<extension type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_JOOMCODE</name>
+    <element>joomcode</element>
+    <version>1.1.0</version>
+    <creationDate>20 July 2026</creationDate>
+    <author>JoomTheme</author>
+    <authorEmail>support@joomtheme.com</authorEmail>
+    <authorUrl>https://joomtheme.com</authorUrl>
+    <copyright>Copyright (C) 2026 JoomTheme. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>PLG_CONTENT_JOOMCODE_DESCRIPTION</description>
+    <namespace path="src">JoomTheme\Plugin\Content\Joomcode</namespace>
+
+    <files>
+        <folder plugin="joomcode">services</folder>
+        <folder>src</folder>
+        <filename>LICENSE.txt</filename>
+    </files>
+
+    <media destination="plg_content_joomcode" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_content_joomcode.ini</language>
+        <language tag="en-GB">language/en-GB/plg_content_joomcode.sys.ini</language>
+        <language tag="tr-TR">language/tr-TR/plg_content_joomcode.ini</language>
+        <language tag="tr-TR">language/tr-TR/plg_content_joomcode.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="PLG_CONTENT_JOOMCODE_FIELDSET_DISPLAY_LABEL">
+                <field
+                    name="usage_note"
+                    type="note"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_USAGE_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_USAGE_DESC"
+                    class="alert alert-info"
+                />
+
+                <field
+                    name="theme"
+                    type="list"
+                    default="auto"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_THEME_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_THEME_DESC"
+                    validate="options"
+                >
+                    <option value="auto">PLG_CONTENT_JOOMCODE_THEME_AUTO</option>
+                    <option value="light">PLG_CONTENT_JOOMCODE_THEME_LIGHT</option>
+                    <option value="dark">PLG_CONTENT_JOOMCODE_THEME_DARK</option>
+                </field>
+
+                <field
+                    name="show_language"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="1"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_SHOW_LANGUAGE_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_SHOW_LANGUAGE_DESC"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="show_copy"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="1"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_SHOW_COPY_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_SHOW_COPY_DESC"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="line_numbers"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_LINE_NUMBERS_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_LINE_NUMBERS_DESC"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="line_wrap"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    default="0"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_LINE_WRAP_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_LINE_WRAP_DESC"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="max_height"
+                    type="number"
+                    default="0"
+                    min="0"
+                    max="10000"
+                    step="50"
+                    filter="uint"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_MAX_HEIGHT_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_MAX_HEIGHT_DESC"
+                />
+
+                <field
+                    name="fallback_language"
+                    type="list"
+                    default="none"
+                    label="PLG_CONTENT_JOOMCODE_FIELD_FALLBACK_LANGUAGE_LABEL"
+                    description="PLG_CONTENT_JOOMCODE_FIELD_FALLBACK_LANGUAGE_DESC"
+                    validate="options"
+                >
+                    <option value="none">PLG_CONTENT_JOOMCODE_LANGUAGE_PLAINTEXT</option>
+                    <option value="markup">PLG_CONTENT_JOOMCODE_LANGUAGE_HTML</option>
+                    <option value="php">PLG_CONTENT_JOOMCODE_LANGUAGE_PHP</option>
+                    <option value="css">PLG_CONTENT_JOOMCODE_LANGUAGE_CSS</option>
+                    <option value="javascript">PLG_CONTENT_JOOMCODE_LANGUAGE_JAVASCRIPT</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="JoomCode Updates">https://raw.githubusercontent.com/joomtheme/JoomCode/main/updates/joomcode.xml</server>
+    </updateservers>
+
+    <changelogurl>https://raw.githubusercontent.com/joomtheme/JoomCode/main/updates/changelog.xml</changelogurl>
+</extension>
