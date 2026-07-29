@@ -32,7 +32,7 @@ Supported bundled syntax definitions:
 
 ## Third-party code
 
-PrismJS 1.30.0 is bundled under the MIT License. Its license is included at `package/media/js/vendor/prism/LICENSE`.
+PrismJS 1.30.0 is bundled under the MIT License. The full license text is available in the [official PrismJS repository](https://github.com/PrismJS/prism/blob/v1.30.0/LICENSE).
 
 ## License
 
