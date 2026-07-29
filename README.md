@@ -4,6 +4,9 @@ JoomCode is a Joomla content plugin that enhances standard `<pre><code>` blocks 
 
 The plugin uses Joomla's namespaced plugin architecture, dependency injection service provider, typed content event, language files, Web Asset Manager, and the existing Joomla/Bootstrap administration UI. It does not replace Joomla layouts or load a separate UI framework.
 
+<img width="1920" height="3187" alt="joomcode_fronted" src="https://github.com/user-attachments/assets/e3f55d6e-60cd-456a-9414-fcdde80f41e8" />
+
+
 ## Requirements
 
 - Joomla 5.x or 6.x
