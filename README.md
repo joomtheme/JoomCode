@@ -27,7 +27,6 @@ Supported bundled syntax definitions:
 
 ## Repository layout
 
-- `package/` — installable Joomla plugin source
 - `updates/` — Joomla update server and changelog XML files
 - `docs/JED-CHECKLIST.md` — JED preparation notes
 
