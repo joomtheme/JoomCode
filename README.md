@@ -23,23 +23,13 @@ Supported bundled syntax definitions:
 - HTML/XML/markup
 - PHP
 - CSS
-- JavaScript
 - Plain text
 
 ## Repository layout
 
 - `package/` — installable Joomla plugin source
 - `updates/` — Joomla update server and changelog XML files
-- `releases/` — built installation ZIP files
-- `scripts/` — local validation and release build scripts
 - `docs/JED-CHECKLIST.md` — JED preparation notes
-
-## Build and validate
-
-```bash
-bash scripts/validate.sh
-bash scripts/build-release.sh
-```
 
 ## Third-party code
 
